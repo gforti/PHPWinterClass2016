@@ -10,7 +10,7 @@
         $config = array(
             'DB_DNS' => 'mysql:host=localhost;port=3306;dbname=PHPClassSummer2015', 
             'DB_USER' => 'php', 
-            'DB_PASSWORD' => 'winter2016'
+            'DB_PASSWORD' => 'winter16'
             );
         
          
