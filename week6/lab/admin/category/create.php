@@ -43,13 +43,7 @@
         
          <h1>Add Category</h1>
         
-          <?php if ( isset($errors) && count($errors) > 0 ) : ?>
-            <ul>
-                <?php foreach ($errors as $error): ?>
-                <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
+          <?php include '../../includes/errors.html.php'; ?>
         
          
        <?php include '../../includes/results.html.php'; ?>
