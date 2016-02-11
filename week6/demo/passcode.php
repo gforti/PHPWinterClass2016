@@ -10,7 +10,9 @@
             
                    include_once './header.php';
                    
+                   
             if ( !empty($_POST) ) {
+               
                 $passcode = filter_input(INPUT_POST, 'passcode');
                 
                 if ( $passcode === 'test' ) {

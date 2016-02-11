@@ -10,6 +10,8 @@
         
             session_start();
             
+            $hello = 'hello';
+            
             $_SESSION['hello'] = 'hello';
             
             $_SESSION['cart'] = array();
