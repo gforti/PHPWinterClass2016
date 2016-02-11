@@ -52,6 +52,14 @@ try {
     if ( false === $ext ) {
         throw new RuntimeException('Invalid file format.');
     }
+    
+     /* Alternative to getting file extention 
+    $name = $_FILES["upfile"]["name"];
+    $ext = strtolower(end((explode(".", $name))));
+    if (preg_match("/^(jpeg|jpg|png|gif)$/", $ext) == false) {
+        throw new RuntimeException('Invalid file format.');
+    }
+     Alternative END */
 
     // You should name it uniquely.
     // DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
@@ -59,6 +67,10 @@ try {
     
     $fileName =  sha1_file($_FILES['upfile']['tmp_name']); 
     $location = sprintf('./uploads/%s.%s', $fileName, $ext); 
+    
+    if (!is_dir('./uploads')) {
+        mkdir('./uploads');
+    }
         
     if ( !move_uploaded_file( $_FILES['upfile']['tmp_name'], $location) ) {
         throw new RuntimeException('Failed to move uploaded file.');
