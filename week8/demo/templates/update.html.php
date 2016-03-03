@@ -1,4 +1,3 @@
-<h1>Update Page</h1>
 
 <table border="1">
     <thead>
