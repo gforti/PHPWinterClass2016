@@ -16,8 +16,10 @@
                 }                
                 
             } catch (ErrorException $ex) {
+                
+               
 
-                logError($ex->getMessage());
+                logError($ex->getMessage() . ' Line: ' .$ex->getLine() . ' File: '. $ex->getFile());
             }
             
             

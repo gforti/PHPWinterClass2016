@@ -13,7 +13,7 @@ function logError($message) {
         $refID = uniqid();
         $directory = '.'.DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR;
         $file = 'errors.log';
-        $dataLog = '[' . $refID . ']    [error] [' . date("m-d-Y g:ia") . ']    ' . $message . PHP_EOL;
+        $dataLog = '[' . $refID . ']    [error] [' . date("m-d-Y g:ia") . ']    ' . $message . PHP_EOL;                                
         
         if (!is_dir($directory)) {
             mkdir($directory);
@@ -35,3 +35,15 @@ function exception_error_handler($severity, $message, $file, $line) {
     throw new ErrorException($message, 0, $severity, $file, $line);
 }
 set_error_handler("exception_error_handler");
+
+
+
+
+
+
+
+
+
+
+
+
